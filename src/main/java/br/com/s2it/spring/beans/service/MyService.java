@@ -1,4 +1,4 @@
-package br.com.s2it.spring.beans.config.service;
+package br.com.s2it.spring.beans.service;
 
 public interface MyService {
 	

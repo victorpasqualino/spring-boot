@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="myService" class="br.com.s2it.spring.beans.service.impl.MyServiceImpl">
+		<constructor-arg name="petDao" ref="jdbcPetDao"/>
+        <!-- additional collaborators and configuration for this bean go here -->
+    </bean>
+    
+    <bean id="jpaPetDao" class="br.com.s2it.spring.beans.service.impl.JpaPetDAO">
+        <!-- additional collaborators and configuration for this bean go here -->
+    </bean>
+    
+    <bean id="jdbcPetDao" class="br.com.s2it.spring.beans.service.impl.JdbcPetDAO">
+        <!-- additional collaborators and configuration for this bean go here -->
+    </bean>
+
+	<!-- more bean definitions go here -->
+
+</beans>
