@@ -12,6 +12,15 @@ public class XmlBasedApplicationContext {
 		ApplicationContext context = new ClassPathXmlApplicationContext("services.xml");
 		MyService myService = context.getBean(MyService.class);
 		myService.doStuff();
+		
+		myService = context.getBean(MyService.class);
+		myService.doStuff();
+		
+		myService = context.getBean(MyService.class);
+		myService.doStuff();
+		
+		myService = context.getBean(MyService.class);
+		myService.doStuff();
 	}
-
+	
 }

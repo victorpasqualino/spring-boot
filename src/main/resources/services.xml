@@ -5,15 +5,15 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="myService" class="br.com.s2it.spring.beans.service.impl.MyServiceImpl">
-		<constructor-arg name="petDao" ref="jdbcPetDao"/>
+		<constructor-arg name="petDao" ref="jpaPetDao"/>
         <!-- additional collaborators and configuration for this bean go here -->
     </bean>
     
-    <bean id="jpaPetDao" class="br.com.s2it.spring.beans.service.impl.JpaPetDAO">
+    <bean id="jpaPetDao" class="br.com.s2it.spring.beans.service.impl.JpaPetDao">
         <!-- additional collaborators and configuration for this bean go here -->
     </bean>
     
-    <bean id="jdbcPetDao" class="br.com.s2it.spring.beans.service.impl.JdbcPetDAO">
+    <bean id="jdbcPetDao" class="br.com.s2it.spring.beans.service.impl.JdbcPetDao">
         <!-- additional collaborators and configuration for this bean go here -->
     </bean>
 

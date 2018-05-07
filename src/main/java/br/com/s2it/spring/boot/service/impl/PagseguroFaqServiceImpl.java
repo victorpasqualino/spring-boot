@@ -30,7 +30,8 @@ public class PagseguroFaqServiceImpl implements PagseguroFaqService {
 			connection.setRequestProperty("Accept", "utf-8");
 			connection.setRequestProperty("Accept-Language", "en-US,en;q=0.5");
 			InputStream inputStream = connection.getInputStream();
-			byte[] readAllBytes = inputStream.readAllBytes();
+//			byte[] readAllBytes = inputStream.readAllBytes();
+			byte[] readAllBytes = null;
 			openBrowser(readAllBytes);
 			return new String(readAllBytes, StandardCharsets.UTF_8);
 		} catch (IOException e) {
@@ -42,8 +43,8 @@ public class PagseguroFaqServiceImpl implements PagseguroFaqService {
 	private void openBrowser(byte[] readAllBytes) throws IOException {
 		Path path = new File("faqSearch.html").toPath();
 		Files.write(path, readAllBytes);
-		Process p = new ProcessBuilder("firefox", "faqSearch.html").start();
-		System.out.println("processId=" + p.pid());
+//		Process p = new ProcessBuilder("firefox", "faqSearch.html").start();
+//		System.out.println("processId=" + p.pid());
 		Files.delete(path);
 	}
 
